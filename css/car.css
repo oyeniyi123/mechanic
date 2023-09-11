@@ -4074,19 +4074,37 @@ footer{
 
 
 
-@media screen and (max-width:1100px){
-  .slide .img{
-    width: 450px;
-  }
-}
 
-@media screen and (max-width:966px){
+@media screen and (max-width:1100px){
   
   .general-camp .social .bx{
     font-size: 1.2rem;
     padding: 8px;
   }
+  .slide .img{
+    width: 450px;
+    height: 340px;
+  }
 
+  .slider{
+    width: 450px;
+    height: 340px;
+  }
+
+  .sliders{
+    height: 340px;
+  }
+
+   .slide .img p{
+    width: 370px;
+   }
+  
+
+   .navigation-auto{
+    width: 450px;
+    margin-top: 300px;
+  }
+}
   .slider{
     height: 340px;
   }
@@ -4147,7 +4165,7 @@ footer{
 
 
 
-/*  */
+
 @media screen and (max-width:748px){
   .general-camp .just-this{
     font-size: 15px;
