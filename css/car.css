@@ -4074,6 +4074,11 @@ footer{
 
 
 
+@media screen and (max-width:1100px){
+  .slide .img{
+    width: 450px;
+  }
+}
 
 @media screen and (max-width:966px){
   
@@ -4083,7 +4088,6 @@ footer{
   }
 
   .slider{
-    width: 450px;
     height: 340px;
   }
 
