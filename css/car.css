@@ -1127,8 +1127,15 @@ nav a:hover{
 
 
 @media screen and (max-width: 1077px){
+  .inventory p{
+    font-size: 12px;
+  }
   .boxbox{
     width: 290px;
+  }
+
+  .this-car-link a{
+    padding: 10px 30px;
   }
 }
 
@@ -1177,6 +1184,10 @@ nav a:hover{
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .inventory p{
+    font-size: 17px;
+  }
+
   .boxbox{
     width: 340px;
   }
@@ -1188,7 +1199,8 @@ nav a:hover{
   }
 
   .this-car-link a{
-    padding: 13px 25px;
+    padding: 15px 30px;
+    font-size: 16px;
   }
 }
 
