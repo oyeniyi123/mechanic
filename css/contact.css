@@ -940,8 +940,12 @@
 
 
 @media screen and (max-width:1091px){
-  .Want-to-grid{
-    grid-template-columns: 670px 300px;
+    .Want-to-grid{
+    display: block;
+  }
+  
+  .want-to-link{
+    margin-top: 2rem;
   }
   
 }
@@ -1044,11 +1048,6 @@
 @media screen and (max-width:655px){
   .want-to-home{
     padding: 15px;
-    /* margin-bottom: 5rem; */
-  }
-
-  .Want-to-grid{
-    display: block;
   }
 
   .want-to-button{
