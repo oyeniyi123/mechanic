@@ -73,48 +73,58 @@ window.addEventListener("scroll", () => {
 
 
       //Email
-      function validate(){
-        let name = document.querySelector('.name')
-        let email = document.querySelector('.email')
-        let msg = document.querySelector('.message')
-        let sendBtn = document.querySelector('.send-btn')
+     function validate(){
+    let name = document.querySelector('.name')
+    let email = document.querySelector('.email')
+    let msg = document.querySelector('.message')
+    let sendBtn = document.querySelector('.send-btn')
+    
+    sendBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         
-        sendBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            if (name.value == "" || email.value == "" || msg.value == ""){
-               alert("Fill up required fields")
-            }
-            
-            else{
-                sendmail(name.value, email.value, msg.value);
-                success();
-            }
-        });
-    }
-    
-    validate();
-    
-    
-    
-    function sendmail(name, email, msg){
-        emailjs.send("service_d42omd8","template_jgrwizb",{
-    
-    to_name: email,
-    
-    from_name: name,
-    
-    message: msg,
-    
+        if (name.value == "" || email.value == "" || msg.value == ""){
+            emptyerror();
+        }
+        
+        else{
+            sendmail(name.value, email.value, msg.value);
+            success();
+        }
     });
-    }
-    
-    
-    function success(){
-        swal({
-      title: "Email Sent successfully",
-      text: "W'll get back to you within the hour",
-      icon: "success",
-     
-    });
-    }
+}
+
+validate();
+
+
+function emptyerror(){
+    swal({
+  title: "Oh No...",
+  text: "Fields cannot be empty!",
+  icon: "error",
+ 
+});
+}
+
+
+
+function sendmail(name, email, msg){
+    emailjs.send("service_d42omd8","template_jgrwizb",{
+
+to_name: email,
+
+from_name: name,
+
+message: msg,
+
+});
+}
+
+
+function success(){
+    swal({
+  title: "Email Sent successfully",
+  text: "We try to reply in 24 hours",
+  icon: "success",
+ 
+});
+}
